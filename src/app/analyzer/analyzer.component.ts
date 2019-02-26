@@ -6,16 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./analyzer.component.css']
 })
 export class AnalyzerComponent implements OnInit {
+
   isTextAnalyzed:boolean = false;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  anaylyzeText(): void {
-    this.isTextAnalyzed = true;
-  }
 
   /*
     Options object for froala text editor.
@@ -28,5 +20,15 @@ export class AnalyzerComponent implements OnInit {
     toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
     toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline']
   }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  anaylyzeText(): void {
+    this.isTextAnalyzed = true;
+  }
+
 
 }

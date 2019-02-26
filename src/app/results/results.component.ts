@@ -13,7 +13,6 @@ export class ResultsComponent implements OnInit {
   data: Object;
 
   constructor() {
-    // Uncomment to debug.
     // console.log(SampleJson);
     this.data = SampleJson;
   }
@@ -23,6 +22,7 @@ export class ResultsComponent implements OnInit {
 
   graphData(data) {
     let value = Math.round(data * 100);
+    // todo: this is a bit of a hack -- graphs don't look good otherwise when percentile data is below 10.
     return (value > 10) ? value : value + 5;
   }
 
