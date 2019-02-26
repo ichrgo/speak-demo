@@ -2,7 +2,7 @@
 
 ## Setup
   * Install [Angular CLI](https://cli.angular.io/) on your local machine.
-  * Clone repo and `cd` into directory.
+  * Clone repo, `cd` into directory, and run `npm install`.
   * Run `ng serve -o` from the command line.  Navigate to `http://localhost:4200/`.
 
 ## Developer Notes:
