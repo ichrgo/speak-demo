@@ -13,7 +13,9 @@ import { ResultsComponent } from './results/results.component';
     ResultsComponent
   ],
   imports: [
-    BrowserModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
+    BrowserModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
