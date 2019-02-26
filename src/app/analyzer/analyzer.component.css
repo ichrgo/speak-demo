@@ -1,0 +1,14 @@
+.jumbotron {
+    padding: 2rem 2rem;
+    margin-top: 1rem;
+}
+
+.btn-analyze {
+  margin-top: 15px;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #42d153;
+  border-color: #37383a;
+}

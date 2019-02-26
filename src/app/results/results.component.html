@@ -1,0 +1,83 @@
+<div *ngIf="showResults">
+
+  <!-- Results -->
+  <div class="overview card text-center">
+    <div class="card-header">
+        <h5 class="word-count">{{ data.word_count}} Words Analyzed</h5>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Overall Tone</h5>
+      <p class="card-text">Sample hard-coded (for now) overview text as a natural lead-in to additional content.  </p>
+    </div>
+    <div class="card-footer text-muted">
+      <a href="assets/sampleJson.json">Download json data set</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Card #1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <h5 class="card-header">
+          Personality
+        </h5>
+        <div class="card-body" *ngFor="let item of data.personality">
+          <p class="card-text">
+            {{ item.name }}
+          </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width.%]="graphData(item.percentile)">
+              {{ labelData(item.percentile) }}%
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <h5 class="card-header">
+          Consumer Needs
+        </h5>
+        <div class="card-body" *ngFor="let need of data.needs | slice:0:5; let i=index">
+          <p class="card-text">
+            {{ need.name }}
+          </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width.%]="graphData(need.percentile)">
+              {{ labelData(need.percentile) }}%
+            </div>
+          </div>
+
+        </div>
+        <a href="#" (click)="viewMore()"> >>> view more</a>
+      </div>
+    </div>
+
+    <!-- Card #3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <h5 class="card-header">
+          Values
+        </h5>
+        <div class="card-body" *ngFor="let value of data.values">
+
+          <p class="card-text">
+            {{ value.name }}
+          </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width.%]="graphData(value.percentile)">
+              {{ labelData(value.percentile) }}%
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
